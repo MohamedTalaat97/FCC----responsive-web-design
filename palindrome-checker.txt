@@ -1,0 +1,27 @@
+function palindrome(str) {
+
+    let arr = str.toLowerCase().split('').filter(e => e.match(/[a-z0-9]/i));
+    let i = 0;
+    let j = arr.length - 1
+    let reverse = [...arr]
+    let length = arr.length
+    console.log(arr,reverse)
+    let count = 0
+while(arr.length)
+{
+   if(arr.pop() == reverse.shift()){
+count++
+console.log(count)
+   }
+      
+}
+
+if (count == length ) {
+  return true}
+  else {
+return false
+  }
+}
+
+
+console.log(palindrome("1 eye for of 1 eye."))
