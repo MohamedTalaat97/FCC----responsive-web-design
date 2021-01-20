@@ -1,0 +1,24 @@
+function rot13(str) {
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let alphabetArr = alphabet.split("")
+  let shiftedAlphabetArr = (alphabet.slice(13) + alphabet.slice(0,13)).split('')
+  let arr = [...str];
+  console.log(arr)
+  let result = []
+
+  for (let index in arr)
+  {
+    let curr = alphabetArr.indexOf(arr[index])
+if (curr != -1)
+{
+result.push(shiftedAlphabetArr[curr])
+continue
+}
+result.push(arr[index])
+  }
+
+
+  return result.join('');
+}
+
+rot13("SERR PBQR PNZC");
